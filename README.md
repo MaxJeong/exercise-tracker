@@ -1,1 +1,1 @@
-# Exercise-Tracker
+# exercise-tracker
