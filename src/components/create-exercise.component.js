@@ -26,7 +26,7 @@ export default class CreateExercises extends Component {
 
     //this functions calls right before anything display on the web page
     componentDidMount() {
-        axios.get('http://localhost:5000/users/')
+        axios.get('/users/')
             .then(response => {
                 if (response.data.length > 0) {
                     this.setState({
@@ -78,7 +78,7 @@ export default class CreateExercises extends Component {
         console.log(exercise);
 
         //sends a post request to the backend endpoint
-        axios.post('http://localhost:5000/exercises/add', exercise)
+        axios.post('/exercises/add', exercise)
             .then(res => console.log(res.data));
 
         //takes the user back to the home page

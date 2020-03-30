@@ -34,7 +34,7 @@ export default class CreateUsers extends Component {
         console.log(user);
 
         //sends a post request to the backend endpoint
-        axios.post('http://localhost:5000/users/add', user)
+        axios.post('/users/add', user)
             .then(res => console.log(res.data));
 
         //set username to blank so user can type in a new username

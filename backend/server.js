@@ -14,14 +14,14 @@ app.use(cors());
 app.use(express.json());
 
 //database uri
-const uri = process.env.ATLAS_URI;
+const uri = require('./config/keys').mongoURI;
 mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true }
 );
 const connection = mongoose.connection;
 
 //outputs message once the connection is opened
 connection.once('open', () => {
-    console.log("MongoDB database connection established successfully");
+    console.log("MongoDB Connected!");
 })
 
 //import the files into the variables
